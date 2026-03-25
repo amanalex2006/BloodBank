@@ -1,8 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}TEST{% endblock %}
-
 {% block content %}
-    <h2>THIS IS TEST</h2>
-    <p>You are TESTING.</p>
+
+<h2>Login</h2>
+
+<form method="POST">
+    <input name="email" placeholder="Email" required><br>
+    <input name="password" type="password" placeholder="Password" required><br>
+
+    <button type="submit">Login</button>
+</form>
+
 {% endblock %}

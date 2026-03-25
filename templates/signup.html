@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Signup</h2>
+
+<form method="POST">
+    <input name="email" placeholder="Email" required><br>
+    <input name="name" placeholder="Name" required><br>
+    <input name="password" type="password" placeholder="Password" required><br>
+
+    <label>Select Role:</label>
+    <select name="role_id">
+        <option value="1">Donor</option>
+        <option value="2">Hospital</option>
+    </select><br><br>
+
+    <button type="submit">Sign Up</button>
+</form>
+
+{% endblock %}

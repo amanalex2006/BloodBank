@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Dashboard</h2>
+
+<p>Welcome {{ user.name }}</p>
+
+{% if user.role_id == 1 %}
+    <h3>Donor Panel</h3>
+    <p>View donation requests, update availability</p>
+
+{% elif user.role_id == 2 %}
+    <h3>Hospital Panel</h3>
+    <p>Create blood requests, manage donors</p>
+
+{% else %}
+    <p>Unknown role</p>
+{% endif %}
+
+{% endblock %}

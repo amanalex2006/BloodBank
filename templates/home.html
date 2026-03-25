@@ -1,8 +1,25 @@
 {% extends "base.html" %}
 
-{% block title %}HOME{% endblock %}
-
 {% block content %}
-    <h2>Welcome to HOME</h2>
+
+<h1>Blood Bank System</h1>
+
+{% if session.get("user_id") %}
     <p>You are logged in.</p>
+    <a href="/dashboard">Go to Dashboard</a>
+{% else %}
+    <p>Save lives. Donate blood or manage requests.</p>
+
+    <h3>Choose your role:</h3>
+
+    <a href="/signup?role=donor">
+        <button>Register as Donor</button>
+    </a>
+
+    <a href="/signup?role=hospital">
+        <button>Register as Hospital</button>
+    </a>
+
+{% endif %}
+
 {% endblock %}
