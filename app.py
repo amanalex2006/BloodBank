@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,render_template
 from flask_sqlalchemy import SQLAlchemy
 import os
 from dotenv import load_dotenv
@@ -23,7 +23,7 @@ db = SQLAlchemy(app)
 
 @app.route("/")
 def home():
-    return "Blood Bank App Running"
+    return render_template("home.html")
 
 
 @app.route("/test-db")
