@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 from dotenv import load_dotenv
 from sqlalchemy import text, inspect
+from werkzeug.security import generate_password_hash, check_password_hash
 
 load_dotenv()
 
