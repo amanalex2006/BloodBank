@@ -25,6 +25,9 @@ db = SQLAlchemy(app)
 def home():
     return render_template("home.html")
 
+@app.route("/testx")
+def test():
+    return render_template("test.html")
 
 @app.route("/test-db")
 def test_db():
